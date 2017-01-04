@@ -36,5 +36,18 @@ class IndexController extends Yaf\Controller_Abstract {
         return false;
 	}
 
+	public function dbAction() {
+
+		$User=New UserModel();
+
+		if( $User->insert() ){
+			echo "success";
+		}else{
+			echo 'error';
+		}
+
+        return false;
+	}
+
 
 }
